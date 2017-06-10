@@ -3,7 +3,12 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if !cart.any? %>
+    <div class="jumbotron">
+      <h4> Your cart is empty! </h1>
+      <h4> You can go back to <%= link_to "Home", :root %> and choose the products. Thank you.</h4>
+    </div>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -49,5 +54,6 @@
       <% end %>
     </div>
   </div>
+<% end %>
 
 </section>
