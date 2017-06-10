@@ -9,8 +9,17 @@ Rails.application.routes.draw do
     put    :add_item
     delete :remove_item
   end
-
+  #routes for orders
   resources :orders, only: [:create, :show]
+  
+  # routes for users
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+  
+  # routes for sessions
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
   namespace :admin do
     root to: 'dashboard#show'
