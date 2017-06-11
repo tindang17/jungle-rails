@@ -25,7 +25,14 @@
         </dl>
       </div>
     </div>
-
   </article>
-
+  <dt>Review</dt>
+  <dd>
+    <% @product.reviews.each do |review| %>
+      <%= review.rating %> - <%= review.description %> - <%= review.user.first_name %>
+        <% if current_user && current_user.id == review.user_id %>
+          <td> <%= link_to fa_icon('trash'), [review.product, review], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <% end %>
+      <% end %>
+  </dd>
 </section>
