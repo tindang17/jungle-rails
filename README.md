@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. The purpose of this assignment is to help to prepare students in the situation in which they inherit a project from someone else. Instead of building this app from strach, I was given with app to make improvements upon it.
 
 
 ## Setup
